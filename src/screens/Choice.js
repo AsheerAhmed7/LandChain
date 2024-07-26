@@ -66,8 +66,11 @@ const Choice = () => {
         <TouchableOpacity
           style={styles.btn}
           onPress={() => {
-            navigation.navigate('Home');
-            // navigation.navigate('VideoScreen');
+            if (owner == true) {
+              navigation.navigate('Home');
+            } else {
+              navigation.navigate('VideoScreen');
+            }
           }}>
           <Text style={styles.btntxt}>Continue</Text>
         </TouchableOpacity>
